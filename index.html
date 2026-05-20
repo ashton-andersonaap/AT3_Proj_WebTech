@@ -1,239 +1,486 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./assets/css/site.css">
-    <!--<script src="https://cdn.tailwindcss.com"></script>-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Ashton Anderson | Web Tech | Cert 4 Prog</title>
-    
+
+    <link rel="stylesheet" href="./assets/css/site.css">
+
+    <style>
+
+        :root {
+            --green1: #3E6700;
+            --green2: #23330A;
+            --green3: #9BCC52;
+            --green4: #D6FF99;
+            --green5: #EBFFCC;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--green5);
+            color: var(--green2);
+        }
+
+        a {
+            color: var(--green1);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: var(--green3);
+        }
+
+        /* HEADER */
+
+        .top-header {
+            width: 100%;
+            background-color: var(--green2);
+            color: white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .logo h1 {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--green3);
+        }
+
+        /* MAIN */
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        article {
+            background-color: white;
+            border: 2px solid var(--green1);
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        article header {
+            background-color: var(--green1);
+            color: white;
+            padding: 20px;
+        }
+
+        article header h2 {
+            margin: 0;
+        }
+
+        .card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card-footer {
+            background-color: var(--green4);
+            padding: 20px;
+            margin-top: auto;
+            font-weight: bold;
+        }
+
+        /* FORM */
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        input[type="text"] {
+            padding: 12px;
+            border: 2px solid var(--green3);
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .output-box {
+            border: 2px solid var(--green3);
+            background-color: var(--green5);
+            padding: 15px;
+            min-height: 100px;
+            border-radius: 6px;
+        }
+
+        button {
+            background-color: var(--green3);
+            color: var(--green2);
+            border: none;
+            padding: 14px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--green1);
+            color: white;
+        }
+
+        figure {
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        figure img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: var(--green2);
+            color: var(--green4);
+            margin-top: 40px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-brand img {
+            height: 40px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: var(--green4);
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-container {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+            }
+        }
+
+    </style>
+
 </head>
+
 <body>
-<header class="w-full mt-5 text-gray-700 bg-white border-t border-gray-100 shadow-sm body-font">
 
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between p-6 gap-4">
+<header class="top-header">
 
-    <!-- Logo / Title -->
-    <a href="." class="flex items-center gap-2 text-gray-900 title-font">
-      <img
-        src="assets/img/skullogo.jpg"
-        alt="SCC Logo"
-        class="h-6"
-      >
+    <div class="header-container">
 
-      <h1 class="text-sm font-bold">
-        Certificate IV in IT (Programming) Web Tech Portfolio
-      </h1>
-    </a>
+        <a href="." class="logo">
 
-    <!-- Navigation -->
-    <nav aria-label="Main Navigation">
+            <img
+                src="assets/img/skullogo.jpg"
+                alt="SCC Logo"
+            >
 
-      <ul class="flex flex-wrap items-center gap-2 pl-6 ml-6 text-base text-gray-500 border-l border-gray-200">
+            <h1>
+                Certificate IV in IT (Programming) Web Tech Portfolio
+            </h1>
 
-        <li>
-          <a href="." class="px-3 py-2 hover:text-gray-900">
-            Home
-          </a>
-        </li>
+        </a>
 
-        <li>
-          <a href="phase-1" class="px-3 py-2 hover:text-gray-900">
-            Phase 1
-          </a>
-        </li>
+        <nav aria-label="Main Navigation">
 
-        <li>
-          <a href="phase-2" class="px-3 py-2 hover:text-gray-900">
-            Phase 2
-          </a>
-        </li>
+            <ul>
 
-        <li>
-          <a href="phase-3" class="px-3 py-2 hover:text-gray-900">
-            Phase 3
-          </a>
-        </li>
+                <li>
+                    <a href=".">Home</a>
+                </li>
 
-      </ul>
+                <li>
+                    <a href="phase-1">Phase 1</a>
+                </li>
 
-    </nav>
+                <li>
+                    <a href="phase-2">Phase 2</a>
+                </li>
 
-  </div>
+                <li>
+                    <a href="phase-3">Phase 3</a>
+                </li>
 
-</header>
+            </ul>
 
-<main class="p-6 grid grid-cols-2 gap-6">
-  <article class="border border-gray-500 flex flex-col">
-
-    <!-- Card Header -->
-    <header class="bg-gray-800 text-gray-200 p-4">
-      <h2 class="font-bold text-xl">
-        Certificate IV in IT (Programming)
-      </h2>
-    </header>
-
-    <!-- Card Content -->
- 
-    <div class="flex flex-col gap-4 p-4 text-gray-700">
-
-      <p>
-        Web Technologies Portfolio as implemented by Ashton Anderson
-      </p>
-
-      <nav aria-label="Phase navigation" class="flex flex-col gap-2">
-        <a href="phase-1" class="text-blue-600 hover:underline">Phase 1</a>
-        <a href="phase-2" class="text-blue-600 hover:underline">Phase 2</a>
-        <a href="phase-3" class="text-blue-600 hover:underline">Phase 3</a>
-      </nav>
+        </nav>
 
     </div>
 
-    <!-- Card Footer -->
-    <footer class="bg-gray-200 text-gray-800 p-4 mt-auto">
-      20152010 - Ashton Anderson
-    </footer>
+</header>
 
-    
+<main>
 
-  </article>
-<article class="border border-gray-500 flex flex-col">
+    <!-- LEFT CARD -->
 
-  <header class="bg-gray-800 text-gray-200 p-4">
-    <h2 class="text-xl font-bold">NINJA API App - Phase 2</h2>
-  </header>
+    <article>
 
-  <figure class="p-4 flex justify-center">
-    <img
-      src="./assets/img/ascci_saturn.jpg"
-      alt="planet"
-      class="w-16 h-16 object-contain"
-    >
-  </figure>
+        <header>
+            <h2>Certificate IV in IT (Programming)</h2>
+        </header>
 
-  <section class="flex flex-col gap-4 p-4 text-gray-700">
+        <div class="card-content">
 
-    <form class="flex flex-col gap-4" id="apiForm">
+            <p>
+                Web Technologies Portfolio as implemented by Ashton Anderson
+            </p>
 
-      <p>Select From the Following APIs</p>
+            <nav aria-label="Phase navigation">
 
-      <div class="flex flex-col gap-2">
-        <label class="flex items-center gap-2">
-          <input type="checkbox" name="APIs" value="Planetary Data">
-          Planetary Data
-        </label>
+                <ul style="display:flex; flex-direction:column; gap:10px;">
 
-        <label class="flex items-center gap-2">
-          <input type="checkbox" name="APIs" value="Password Generator">
-          Password Generator
-        </label>
-      </div>
+                    <li>
+                        <a href="phase-1">Phase 1</a>
+                    </li>
 
-      <input
-        type="text"
-        id="inputfield"
-        class="border border-gray-300 p-2"
-        placeholder="Enter value..."
-      >
+                    <li>
+                        <a href="phase-2">Phase 2</a>
+                    </li>
 
-      <h3 class="font-semibold">Output:</h3>
+                    <li>
+                        <a href="phase-3">Phase 3</a>
+                    </li>
 
-      <div class="border border-gray-300 p-3 min-h-[100px]">
-        <div id="APIoutput"></div>
-      </div>
+                </ul>
 
-      <button
-        type="submit"
-        id="submitbutton"
-        class="bg-blue-600 text-white px-4 py-2 hover:bg-blue-700"
-      >
-        Submit
-      </button>
+            </nav>
 
-    </form>
+        </div>
 
-  </section>
+        <footer class="card-footer">
+            20152010 - Ashton Anderson
+        </footer>
 
-</article>
+    </article>
+
+    <!-- RIGHT CARD -->
+
+    <article>
+
+        <header>
+            <h2>NINJA API App - Phase 2</h2>
+        </header>
+
+        <figure>
+
+            <img
+                src="./assets/img/ascci_saturn.jpg"
+                alt="planet"
+            >
+
+        </figure>
+
+        <section class="card-content">
+
+            <form id="apiForm">
+
+                <p>Select From the Following APIs</p>
+
+                <label>
+                    <input type="checkbox" name="APIs" value="Planetary Data">
+                    Planetary Data
+                </label>
+
+                <label>
+                    <input type="checkbox" name="APIs" value="Password Generator">
+                    Password Generator
+                </label>
+
+                <input
+                    type="text"
+                    id="inputfield"
+                    placeholder="Enter value..."
+                >
+
+                <h3>Output:</h3>
+
+                <div class="output-box">
+                    <div id="APIoutput"></div>
+                </div>
+
+                <button
+                    type="submit"
+                    id="submitbutton"
+                >
+                    Submit
+                </button>
+
+            </form>
+
+        </section>
+
+    </article>
+
 </main>
 
-<footer class="w-full bg-gray-800 text-gray-400 body-font">
+<footer>
 
-  <section class="container mx-auto flex flex-col items-start justify-between p-6 md:flex-row gap-4">
+    <section class="footer-container">
 
-    <!-- Branding -->
-    <a
-      href="."
-      class="flex items-center gap-2 hover:text-white transition duration-500 ease-in-out"
-    >
-      <img
-        src="../../assets/img/SCC-Logo.svg"
-        alt="SCC Logo"
-        class="h-6"
-      >
+        <div class="footer-brand">
 
-      <h2 class="text-sm">
-        Certificate IV in IT (Programming) Web Tech Portfolio
-      </h2>
-    </a>
+            <img
+                src="../../assets/img/SCC-Logo.svg"
+                alt="SCC Logo"
+            >
 
-    <!-- Copyright -->
-    <p class="border-l border-gray-400 pl-6 text-sm grow flex items-center">
-      © Copyright 2026 Adrian Gould and Ashton Anderson.
-      All rights reserved.
-    </p>
+            <h2>
+                Certificate IV in IT (Programming) Web Tech Portfolio
+            </h2>
 
-    <!-- Footer Navigation -->
-    <nav
-      aria-label="Footer Navigation"
-      class="border-l border-gray-400 pl-6"
-    >
+        </div>
 
-      <ul class="flex flex-wrap gap-4 text-sm">
+        <p>
+            © Copyright 2026 Adrian Gould and Ashton Anderson.
+            All rights reserved.
+        </p>
 
-        <li>
-          <a
-            href="https://www.northmetrotafe.wa.edu.au/apply-and-enrol?gad_source=1&gad_campaignid=23805855284&gclid=EAIaIQobChMIpK6Q96G1lAMVvJtmAh08aRo-EAAYASAAEgJXifD_BwE"
-            class="border-b border-gray-400 hover:border-gray-200 hover:text-white transition duration-500 ease-in-out"
-          >
-            North Metro TAFE
-          </a>
-        </li>
+        <nav
+            class="footer-links"
+            aria-label="Footer Navigation"
+        >
 
-        <li>
-          <a
-            href="https://dev.screencraft.net.au/"
-            class="border-b border-gray-400 hover:border-gray-200 hover:text-white transition duration-500 ease-in-out"
-          >
-            ScreenCraft Dev Sites
-          </a>
-        </li>
+            <ul>
 
-       <li class="w-full">
-          <a
-            href="20152010@tafe.wa.edu.au"
-            class="border-b border-gray-400 hover:border-gray-200 hover:text-white transition duration-500 ease-in-out"
-          >
-            Contact Us
-          </a>
-        </li>
+                <li>
 
-        <li>
-          <a
-            href="https://www.northmetrotafe.wa.edu.au/copyright"
-            class="border-b border-gray-400 hover:border-gray-200 hover:text-white transition duration-500 ease-in-out"
-          >
-            Copyright
-          </a>
-        </li>
+                    <a href="https://www.northmetrotafe.wa.edu.au/apply-and-enrol">
+                        North Metro TAFE
+                    </a>
 
-      </ul>
+                </li>
 
-    </nav>
+                <li>
 
-  </section>
+                    <a href="https://dev.screencraft.net.au/">
+                        ScreenCraft Dev Sites
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="mailto:20152010@tafe.wa.edu.au">
+                        Contact Us
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="https://www.northmetrotafe.wa.edu.au/copyright">
+                        Copyright
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </section>
 
 </footer>
+
 <script src="assets/js/apiScript.js"></script>
+
 </body>
 </html>
