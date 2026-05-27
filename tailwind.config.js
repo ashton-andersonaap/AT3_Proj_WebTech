@@ -1,10 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './index.html',
-    './phase-*/*.html',
-    './pages/**/*.html',
-  ],
+content: [
+  './*.html',
+  './**/*.html'
+],
   theme: {
     extend: { colors: {
         green1: "#3E6700",
