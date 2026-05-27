@@ -6,274 +6,35 @@
 
     <title>Ashton Anderson | Web Tech | Cert 4 Prog</title>
 
-    <link rel="stylesheet" href="./assets/css/site.css">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-
-        :root {
-            --green1: #3E6700;
-            --green2: #23330A;
-            --green3: #9BCC52;
-            --green4: #D6FF99;
-            --green5: #EBFFCC;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: var(--green5);
-            color: var(--green2);
-        }
-
-        a {
-            color: var(--green1);
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        a:hover {
-            color: var(--green3);
-        }
-
-        /* HEADER */
-
-        .top-header {
-            width: 100%;
-            background-color: var(--green2);
-            color: white;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-        }
-
-        .header-container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: white;
-        }
-
-        .logo img {
-            height: 40px;
-        }
-
-        .logo h1 {
-            font-size: 1rem;
-            margin: 0;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav a {
-            color: lightgray;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: var(--green3);
-        }
-
-        /* MAIN */
-
-        main {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        article {
-            background-color: white;
-            border: 2px solid var(--green1);
-            display: flex;
-            flex-direction: column;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        article header {
-            background-color: var(--green1);
-            color: white;
-            padding: 20px;
-        }
-
-        article header h2 {
-            margin: 0;
-        }
-
-        .card-content {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .card-footer {
-            background-color: var(--green4);
-            padding: 20px;
-            margin-top: auto;
-            font-weight: bold;
-        }
-
-        /* FORM */
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        input[type="text"] {
-            padding: 12px;
-            border: 2px solid var(--green3);
-            border-radius: 6px;
-            font-size: 1rem;
-        }
-
-        .output-box {
-            border: 2px solid var(--green3);
-            background-color: var(--green5);
-            padding: 15px;
-            min-height: 100px;
-            border-radius: 6px;
-        }
-
-        button {
-            background-color: var(--green3);
-            color: var(--green2);
-            border: none;
-            padding: 14px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background-color: var(--green1);
-            color: white;
-        }
-
-        figure {
-            display: flex;
-            justify-content: center;
-            padding-top: 20px;
-        }
-
-        figure img {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-        }
-
-        /* FOOTER */
-
-        footer {
-            background-color: var(--green2);
-            color: var(--green4);
-            margin-top: 40px;
-        }
-
-        .footer-container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 30px 20px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .footer-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .footer-brand img {
-            height: 40px;
-        }
-
-        .footer-links ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: var(--green4);
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 768px) {
-
-            main {
-                grid-template-columns: 1fr;
-            }
-
-            .header-container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .footer-container {
-                flex-direction: column;
-            }
-
-            nav ul {
-                flex-wrap: wrap;
-            }
-        }
-
-    </style>
+    <!-- Your stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 
-<body>
+<body
+    class="font-sans"
+    style="background-color:#EBFFCC; color:#23330A;"
+>
 
-<header class="top-header">
+<header
+    class="w-full text-white shadow-md"
+    style="background-color:#23330A;"
+>
 
-    <div class="header-container">
+    <div class="max-w-6xl mx-auto p-5 flex flex-wrap items-center justify-between gap-5">
 
-        <a href="." class="logo">
+        <a href="." class="flex items-center gap-3 text-white">
 
             <img
                 src="assets/img/skullogo.jpg"
                 alt="SCC Logo"
+                class="h-10"
             >
 
-            <h1>
+            <h1 class="text-base font-bold">
                 Certificate IV in IT (Programming) Web Tech Portfolio
             </h1>
 
@@ -281,33 +42,14 @@
 
         <nav aria-label="Main Navigation">
 
-            <ul>
+            <ul class="flex flex-wrap gap-5 font-bold text-gray-300">
 
-                <li>
-                    <a href=".">Home</a>
-                </li>
-
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-
-                <li>
-                    <a href="projects.html">Projects</a>
-                </li>
-
-                <li>
-                    <a href="mywork.html">My Work</a>
-                </li>
-
-                <li>
-                    <a href="resume.html">Resume</a>
-                </li>
-
-
+                <li><a class="hover:text-lime-300 transition" href=".">Home</a></li>
+                <li><a class="hover:text-lime-300 transition" href="about.html">About</a></li>
+                <li><a class="hover:text-lime-300 transition" href="contact.html">Contact</a></li>
+                <li><a class="hover:text-lime-300 transition" href="projects.html">Projects</a></li>
+                <li><a class="hover:text-lime-300 transition" href="mywork.html">My Work</a></li>
+                <li><a class="hover:text-lime-300 transition" href="resume.html">Resume</a></li>
 
             </ul>
 
@@ -317,17 +59,27 @@
 
 </header>
 
-<main>
+<main class="max-w-6xl mx-auto p-5 my-10 grid md:grid-cols-2 gap-8">
 
     <!-- LEFT CARD -->
 
-    <article>
+    <article
+        class="bg-white border-2 rounded-xl overflow-hidden shadow-lg flex flex-col"
+        style="border-color:#3E6700;"
+    >
 
-        <header>
-            <h2>Certificate IV in IT (Programming)</h2>
+        <header
+            class="text-white p-5"
+            style="background-color:#3E6700;"
+        >
+
+            <h2 class="text-2xl font-bold">
+                Certificate IV in IT (Programming)
+            </h2>
+
         </header>
 
-        <div class="card-content">
+        <div class="p-5 flex flex-col gap-5">
 
             <p>
                 Web Technologies Portfolio as implemented by Ashton Anderson
@@ -335,18 +87,36 @@
 
             <nav aria-label="Phase navigation">
 
-                <ul style="display:flex; flex-direction:column; gap:10px;">
+                <ul class="flex flex-col gap-3">
 
                     <li>
-                        <a href="phase-1">Phase 1</a>
+                        <a
+                            class="transition hover:text-lime-700"
+                            style="color:#3E6700;"
+                            href="about.html"
+                        >
+                            About
+                        </a>
                     </li>
 
                     <li>
-                        <a href="phase-2">Phase 2</a>
+                        <a
+                            class="transition hover:text-lime-700"
+                            style="color:#3E6700;"
+                            href="contact.html"
+                        >
+                            Contact
+                        </a>
                     </li>
 
                     <li>
-                        <a href="phase-3">Phase 3</a>
+                        <a
+                            class="transition hover:text-lime-700"
+                            style="color:#3E6700;"
+                            href="resume.html"
+                        >
+                            Resume
+                        </a>
                     </li>
 
                 </ul>
@@ -355,7 +125,10 @@
 
         </div>
 
-        <footer class="card-footer">
+        <footer
+            class="p-5 mt-auto font-bold"
+            style="background-color:#D6FF99;"
+        >
             20152010 - Ashton Anderson
         </footer>
 
@@ -363,52 +136,82 @@
 
     <!-- RIGHT CARD -->
 
-    <article>
+    <article
+        class="bg-white border-2 rounded-xl overflow-hidden shadow-lg flex flex-col"
+        style="border-color:#3E6700;"
+    >
 
-        <header>
-            <h2>NINJA API App - Phase 2</h2>
+        <header
+            class="text-white p-5"
+            style="background-color:#3E6700;"
+        >
+
+            <h2 class="text-2xl font-bold">
+                NINJA API App - Phase 2
+            </h2>
+
         </header>
 
-        <figure>
+        <figure class="flex justify-center pt-5">
 
             <img
                 src="./assets/img/ascci_saturn.jpg"
                 alt="planet"
+                class="w-24 h-24 object-contain"
             >
 
         </figure>
 
-        <section class="card-content">
+        <section class="p-5 flex flex-col gap-5">
 
-            <form id="apiForm">
+            <form id="apiForm" class="flex flex-col gap-5">
 
                 <p>Select From the Following APIs</p>
 
-                <label>
+                <label class="flex items-center gap-2">
+
                     <input type="checkbox" name="APIs" value="Planetary Data">
+
                     Planetary Data
+
                 </label>
 
-                <label>
+                <label class="flex items-center gap-2">
+
                     <input type="checkbox" name="APIs" value="Password Generator">
+
                     Password Generator
+
                 </label>
 
                 <input
                     type="text"
                     id="inputfield"
                     placeholder="Enter value..."
+                    class="p-3 border-2 rounded-md"
+                    style="border-color:#9BCC52;"
                 >
 
-                <h3>Output:</h3>
+                <h3 class="text-xl font-bold">
+                    Output:
+                </h3>
 
-                <div class="output-box">
+                <div
+                    class="border-2 p-4 min-h-[100px] rounded-md"
+                    style="border-color:#9BCC52; background-color:#EBFFCC;"
+                >
+
                     <div id="APIoutput"></div>
+
                 </div>
 
                 <button
                     type="submit"
                     id="submitbutton"
+                    class="font-bold p-4 rounded-md transition hover:text-white"
+                    style="background-color:#9BCC52; color:#23330A;"
+                    onmouseover="this.style.backgroundColor='#3E6700'"
+                    onmouseout="this.style.backgroundColor='#9BCC52'"
                 >
                     Submit
                 </button>
@@ -421,65 +224,54 @@
 
 </main>
 
-<footer>
+<footer
+    class="mt-10 text-sm"
+    style="background-color:#23330A; color:#D6FF99;"
+>
 
-    <section class="footer-container">
+    <section class="max-w-6xl mx-auto px-5 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
 
-        <div class="footer-brand">
+        <div class="flex items-center gap-3">
 
             <img
-                src="../../assets/img/SCC-Logo.svg"
+                src="Assets/img/skullogo.jpg"
                 alt="SCC Logo"
+                class="h-8"
             >
 
-            <h2>
-                Certificate IV in IT (Programming) Web Tech Portfolio
+            <h2 class="font-semibold">
+                Cert IV Web Tech Portfolio
             </h2>
 
         </div>
 
-        <p>
-            © Copyright 2026 Adrian Gould and Ashton Anderson.
-            All rights reserved.
+        <p class="text-center">
+            © 2026 Adrian Gould and Ashton Anderson
         </p>
 
-        <nav
-            class="footer-links"
-            aria-label="Footer Navigation"
-        >
+        <nav aria-label="Footer Navigation">
 
-            <ul>
+            <ul class="flex gap-4 flex-wrap justify-center">
 
                 <li>
-
-                    <a href="https://www.northmetrotafe.wa.edu.au/apply-and-enrol">
-                        North Metro TAFE
+                    <a class="hover:text-white transition"
+                       href="https://www.northmetrotafe.wa.edu.au/apply-and-enrol">
+                        TAFE
                     </a>
-
                 </li>
 
                 <li>
-
-                    <a href="https://dev.screencraft.net.au/">
-                        ScreenCraft Dev Sites
+                    <a class="hover:text-white transition"
+                       href="https://dev.screencraft.net.au/">
+                        ScreenCraft
                     </a>
-
                 </li>
 
                 <li>
-
-                    <a href="mailto:20152010@tafe.wa.edu.au">
-                        Contact Us
+                    <a class="hover:text-white transition"
+                       href="mailto:20152010@tafe.wa.edu.au">
+                        Contact
                     </a>
-
-                </li>
-
-                <li>
-
-                    <a href="https://www.northmetrotafe.wa.edu.au/copyright">
-                        Copyright
-                    </a>
-
                 </li>
 
             </ul>

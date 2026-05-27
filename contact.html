@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ashton Anderson | Web Tech | Cert 4 Prog</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Your stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body
+    class="font-sans"
+    style="background-color:#EBFFCC; color:#23330A;"
+>
+
+<header
+    class="w-full text-white shadow-md"
+    style="background-color:#23330A;"
+>
+
+    <div class="max-w-6xl mx-auto p-5 flex flex-wrap items-center justify-between gap-5">
+
+        <a href="." class="flex items-center gap-3 text-white">
+
+            <img
+                src="assets/img/skullogo.jpg"
+                alt="SCC Logo"
+                class="h-10"
+            >
+
+            <h1 class="text-base font-bold">
+                Certificate IV in IT (Programming) Web Tech Portfolio
+            </h1>
+
+        </a>
+
+        <nav aria-label="Main Navigation">
+
+            <ul class="flex flex-wrap gap-5 font-bold text-gray-300">
+
+                <li>
+                    <a class="hover:text-lime-300 transition" href=".">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a class="hover:text-lime-300 transition" href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a class="hover:text-lime-300 transition" href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a class="hover:text-lime-300 transition" href="projects.html">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a class="hover:text-lime-300 transition" href="mywork.html">
+                        My Work
+                    </a>
+                </li>
+
+                <li>
+                    <a class="hover:text-lime-300 transition" href="resume.html">
+                        Resume
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<main class="max-w-6xl mx-auto p-5 my-10 grid md:grid-cols-2 gap-8">
+
+    <!-- LEFT CARD -->
+
+    <article
+        class="bg-white border-2 rounded-xl overflow-hidden shadow-lg flex flex-col min-h-[350px]"
+        style="border-color:#3E6700;"
+    >
+
+        <header
+            class="text-white p-5"
+            style="background-color:#3E6700;"
+        >
+
+            <h2 class="text-2xl font-bold">
+                Contact Info
+            </h2>
+
+        </header>
+
+        <div class="flex-1 p-5">
+            <p>Address: NM TAFE
+                <br>
+                <br>
+                Email: 20152010@TAFE.WA.EDU.AU
+                <br>
+                <br>
+                Github: <a href="https://github.com/ashton-andersonaap" class="text-green-700 hover:text-green-400 underline">https://github.com/ashton-andersonaap</a>
+            </p>
+        </div>
+
+    
+
+    </article>
+
+    <!-- RIGHT CARD -->
+
+    <article
+        class="bg-white border-2 rounded-xl overflow-hidden shadow-lg flex flex-col min-h-[350px]"
+        style="border-color:#3E6700;"
+    >
+
+        <header
+            class="text-white p-5"
+            style="background-color:#3E6700;"
+        >
+
+            <h2 class="text-2xl font-bold">
+                Contact Me
+            </h2>
+
+        </header>
+
+       <div class="flex-1 p-5">
+
+    <form
+        id="contactForm"
+        class="flex flex-col gap-4"
+    >
+
+        <!-- Name -->
+
+        <div class="flex flex-col gap-2">
+
+            <label
+                for="name"
+                class="font-bold"
+            >
+                Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                class="p-3 border rounded-md"
+                style="border-color:#9BCC52;"
+                required
+            >
+
+        </div>
+
+        <!-- Email -->
+
+        <div class="flex flex-col gap-2">
+
+            <label
+                for="email"
+                class="font-bold"
+            >
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                class="p-3 border rounded-md"
+                style="border-color:#9BCC52;"
+                required
+            >
+
+        </div>
+
+        <!-- Message -->
+
+        <div class="flex flex-col gap-2">
+
+            <label
+                for="message"
+                class="font-bold"
+            >
+                Message
+            </label>
+
+            <textarea
+                id="message"
+                rows="5"
+                placeholder="Write your message..."
+                class="p-3 border rounded-md resize-none"
+                style="border-color:#9BCC52;"
+                required
+            ></textarea>
+
+        </div>
+
+        <!-- Submit Button -->
+
+        <button
+            type="submit"
+            class="p-5 mt-auto font-bold"
+            style="background-color:#D6FF99;"
+            onmouseover="this.style.backgroundColor='#3E6700'; this.style.color='white';"
+            onmouseout="this.style.backgroundColor='#9BCC52'; this.style.color='#23330A';"
+        >
+            Send Message
+        </button>
+
+    </form>
+
+</div>
+
+    </article>
+
+</main>
+
+<footer
+    class="mt-10 text-sm"
+    style="background-color:#23330A; color:#D6FF99;"
+>
+
+    <section class="max-w-6xl mx-auto px-5 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+
+        <div class="flex items-center gap-3">
+
+            <img
+                src="assets/img/skullogo.jpg"
+                alt="SCC Logo"
+                class="h-8"
+            >
+
+            <h2 class="font-semibold">
+                Cert IV Web Tech Portfolio
+            </h2>
+
+        </div>
+
+        <p class="text-center">
+            © 2026 Adrian Gould and Ashton Anderson
+        </p>
+
+        <nav aria-label="Footer Navigation">
+
+            <ul class="flex gap-4 flex-wrap justify-center">
+
+                <li>
+                    <a class="hover:text-white transition"
+                       href="https://www.northmetrotafe.wa.edu.au/apply-and-enrol">
+                        TAFE
+                    </a>
+                </li>
+
+                <li>
+                    <a class="hover:text-white transition"
+                       href="https://dev.screencraft.net.au/">
+                        ScreenCraft
+                    </a>
+                </li>
+
+                <li>
+                    <a class="hover:text-white transition"
+                       href="mailto:20152010@tafe.wa.edu.au">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </section>
+
+</footer>
+
+<script src="Assets/js/contactMe.js"></script>
+</body>
+</html>
