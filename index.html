@@ -44,7 +44,7 @@
 
             <ul class="flex flex-wrap gap-5 font-bold text-gray-300">
 
-                <li><a class="hover:text-lime-300 transition" href=".">Home</a></li>
+                <li><a class="hover:text-lime-300 transition" href="index.html">Home</a></li>
                 <li><a class="hover:text-lime-300 transition" href="about.html">About</a></li>
                 <li><a class="hover:text-lime-300 transition" href="contact.html">Contact</a></li>
                 <li><a class="hover:text-lime-300 transition" href="projects.html">Projects</a></li>
@@ -136,91 +136,79 @@
 
     <!-- RIGHT CARD -->
 
-    <article
-        class="bg-white border-2 rounded-xl overflow-hidden shadow-lg flex flex-col"
-        style="border-color:#3E6700;"
+    
+    <!-- RIGHT CARD -->
+<article
+    class="bg-white border-2 rounded-xl overflow-hidden shadow-lg flex flex-col"
+    style="border-color:#3E6700;"
+>
+
+    <header
+        class="text-white p-5"
+        style="background-color:#3E6700;"
     >
+        <h2 class="text-2xl font-bold">
+            NINJA API App - Phase 2
+        </h2>
+    </header>
 
-        <header
-            class="text-white p-5"
-            style="background-color:#3E6700;"
-        >
+    <div class="p-5 flex flex-col gap-5">
 
-            <h2 class="text-2xl font-bold">
-                NINJA API App - Phase 2
-            </h2>
-
-        </header>
-
-        <figure class="flex justify-center pt-5">
-
+        <figure class="flex justify-center">
             <img
                 src="./assets/img/ascci_saturn.jpg"
                 alt="planet"
                 class="w-24 h-24 object-contain"
             >
-
         </figure>
 
-        <section class="p-5 flex flex-col gap-5">
+        <form id="apiForm" class="flex flex-col gap-5">
 
-            <form id="apiForm" class="flex flex-col gap-5">
+            <p>Select From the Following APIs</p>
 
-                <p>Select From the Following APIs</p>
+            <label class="flex items-center gap-2">
+                <input type="checkbox" name="APIs" value="Planetary Data">
+                Planetary Data
+            </label>
 
-                <label class="flex items-center gap-2">
+            <label class="flex items-center gap-2">
+                <input type="checkbox" name="APIs" value="Password Generator">
+                Password Generator
+            </label>
 
-                    <input type="checkbox" name="APIs" value="Planetary Data">
+            <input
+                type="text"
+                id="inputfield"
+                placeholder="Enter value..."
+                class="p-3 border-2 rounded-md"
+                style="border-color:#9BCC52;"
+            >
 
-                    Planetary Data
+            <h3 class="text-xl font-bold">Output:</h3>
 
-                </label>
+            <div
+                class="border-2 p-4 min-h-[100px] rounded-md"
+                style="border-color:#9BCC52; background-color:#EBFFCC;"
+            >
+                <div id="APIoutput"></div>
+            </div>
 
-                <label class="flex items-center gap-2">
+            <button
+                type="submit"
+                id="submitbutton"
+                class="p-4 font-bold rounded-md transition"
+                style="background-color:#D6FF99; color:#23330A;"
+                onmouseover="this.style.backgroundColor='#3E6700'; this.style.color='white';"
+                onmouseout="this.style.backgroundColor='#D6FF99'; this.style.color='#23330A';"
+            >
+                Submit
+            </button>
 
-                    <input type="checkbox" name="APIs" value="Password Generator">
+        </form>
 
-                    Password Generator
+    </div>
 
-                </label>
-
-                <input
-                    type="text"
-                    id="inputfield"
-                    placeholder="Enter value..."
-                    class="p-3 border-2 rounded-md"
-                    style="border-color:#9BCC52;"
-                >
-
-                <h3 class="text-xl font-bold">
-                    Output:
-                </h3>
-
-                <div
-                    class="border-2 p-4 min-h-[100px] rounded-md"
-                    style="border-color:#9BCC52; background-color:#EBFFCC;"
-                >
-
-                    <div id="APIoutput"></div>
-
-                </div>
-
-                <button
-                    type="submit"
-                    id="submitbutton"
-                    class="font-bold p-4 rounded-md transition hover:text-white"
-                    style="background-color:#9BCC52; color:#23330A;"
-                    onmouseover="this.style.backgroundColor='#3E6700'"
-                    onmouseout="this.style.backgroundColor='#9BCC52'"
-                >
-                    Submit
-                </button>
-
-            </form>
-
-        </section>
-
-    </article>
+</article>
 
 </main>
 
@@ -269,7 +257,7 @@
 
                 <li>
                     <a class="hover:text-white transition"
-                       href="mailto:20152010@tafe.wa.edu.au">
+                       href="contact.html">
                         Contact
                     </a>
                 </li>

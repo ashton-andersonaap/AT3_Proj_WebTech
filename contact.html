@@ -24,7 +24,7 @@
     style="background-color:#23330A;"
 >
 
-    <div class="max-w-6xl mx-auto p-5 flex flex-wrap items-center justify-between gap-5">
+    <section class="max-w-6xl mx-auto p-5 flex flex-wrap items-center justify-between gap-5">
 
         <a href="." class="flex items-center gap-3 text-white">
 
@@ -44,54 +44,24 @@
 
             <ul class="flex flex-wrap gap-5 font-bold text-gray-300">
 
-                <li>
-                    <a class="hover:text-lime-300 transition" href=".">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a class="hover:text-lime-300 transition" href="about.html">
-                        About
-                    </a>
-                </li>
-
-                <li>
-                    <a class="hover:text-lime-300 transition" href="contact.html">
-                        Contact
-                    </a>
-                </li>
-
-                <li>
-                    <a class="hover:text-lime-300 transition" href="projects.html">
-                        Projects
-                    </a>
-                </li>
-
-                <li>
-                    <a class="hover:text-lime-300 transition" href="mywork.html">
-                        My Work
-                    </a>
-                </li>
-
-                <li>
-                    <a class="hover:text-lime-300 transition" href="resume.html">
-                        Resume
-                    </a>
-                </li>
+                <li><a class="hover:text-lime-300 transition" href="index.html">Home</a></li>
+                <li><a class="hover:text-lime-300 transition" href="about.html">About</a></li>
+                <li><a class="hover:text-lime-300 transition" href="contact.html">Contact</a></li>
+                <li><a class="hover:text-lime-300 transition" href="projects.html">Projects</a></li>
+                <li><a class="hover:text-lime-300 transition" href="mywork.html">My Work</a></li>
+                <li><a class="hover:text-lime-300 transition" href="resume.html">Resume</a></li>
 
             </ul>
 
         </nav>
 
-    </div>
+    </section>
 
 </header>
 
 <main class="max-w-6xl mx-auto p-5 my-10 grid md:grid-cols-2 gap-8">
 
     <!-- LEFT CARD -->
-
     <article
         class="bg-white border-2 rounded-xl overflow-hidden shadow-lg flex flex-col min-h-[350px]"
         style="border-color:#3E6700;"
@@ -101,30 +71,27 @@
             class="text-white p-5"
             style="background-color:#3E6700;"
         >
-
             <h2 class="text-2xl font-bold">
                 Contact Info
             </h2>
-
         </header>
 
-        <div class="flex-1 p-5">
-            <p>Address: NM TAFE
-                <br>
-                <br>
+        <section class="flex-1 p-5">
+            <p>
+                Address: NM TAFE
+                <br><br>
                 Email: 20152010@TAFE.WA.EDU.AU
-                <br>
-                <br>
-                Github: <a href="https://github.com/ashton-andersonaap" class="text-green-700 hover:text-green-400 underline">https://github.com/ashton-andersonaap</a>
+                <br><br>
+                Github:
+                <a href="https://github.com/ashton-andersonaap" class="text-green-700 hover:text-green-400 underline">
+                    https://github.com/ashton-andersonaap
+                </a>
             </p>
-        </div>
-
-    
+        </section>
 
     </article>
 
     <!-- RIGHT CARD -->
-
     <article
         class="bg-white border-2 rounded-xl overflow-hidden shadow-lg flex flex-col min-h-[350px]"
         style="border-color:#3E6700;"
@@ -134,101 +101,59 @@
             class="text-white p-5"
             style="background-color:#3E6700;"
         >
-
             <h2 class="text-2xl font-bold">
                 Contact Me
             </h2>
-
         </header>
 
-       <div class="flex-1 p-5">
+        <section class="flex-1 p-5">
 
-    <form
-        id="contactForm"
-        class="flex flex-col gap-4"
-    >
+            <form id="contactForm" class="flex flex-col gap-4">
 
-        <!-- Name -->
+                <!-- Name -->
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Name"
+                    class="p-3 border rounded-md"
+                    style="border-color:#9BCC52;"
+                >
+                <p id="nameError" class="text-red-600 text-sm"></p>
 
-        <div class="flex flex-col gap-2">
+                <!-- Email -->
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    class="p-3 border rounded-md"
+                    style="border-color:#9BCC52;"
+                >
+                <p id="emailError" class="text-red-600 text-sm"></p>
 
-            <label
-                for="name"
-                class="font-bold"
-            >
-                Name
-            </label>
+                <!-- Message -->
+                <textarea
+                    id="message"
+                    placeholder="Message"
+                    rows="5"
+                    class="p-3 border rounded-md"
+                    style="border-color:#9BCC52;"
+                ></textarea>
+                <p id="messageError" class="text-red-600 text-sm"></p>
 
-            <input
-                type="text"
-                id="name"
-                placeholder="Enter your name"
-                class="p-3 border rounded-md"
-                style="border-color:#9BCC52;"
-                required
-            >
+                <!-- Submit -->
+                <button
+                    type="submit"
+                    class="p-5 mt-auto font-bold"
+                    style="background-color:#D6FF99;"
+                    onmouseover="this.style.backgroundColor='#3E6700'; this.style.color='white';"
+                    onmouseout="this.style.backgroundColor='#9BCC52'; this.style.color='#23330A';"
+                >
+                    Send Message
+                </button>
 
-        </div>
+            </form>
 
-        <!-- Email -->
-
-        <div class="flex flex-col gap-2">
-
-            <label
-                for="email"
-                class="font-bold"
-            >
-                Email
-            </label>
-
-            <input
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                class="p-3 border rounded-md"
-                style="border-color:#9BCC52;"
-                required
-            >
-
-        </div>
-
-        <!-- Message -->
-
-        <div class="flex flex-col gap-2">
-
-            <label
-                for="message"
-                class="font-bold"
-            >
-                Message
-            </label>
-
-            <textarea
-                id="message"
-                rows="5"
-                placeholder="Write your message..."
-                class="p-3 border rounded-md resize-none"
-                style="border-color:#9BCC52;"
-                required
-            ></textarea>
-
-        </div>
-
-        <!-- Submit Button -->
-
-        <button
-            type="submit"
-            class="p-5 mt-auto font-bold"
-            style="background-color:#D6FF99;"
-            onmouseover="this.style.backgroundColor='#3E6700'; this.style.color='white';"
-            onmouseout="this.style.backgroundColor='#9BCC52'; this.style.color='#23330A';"
-        >
-            Send Message
-        </button>
-
-    </form>
-
-</div>
+        </section>
 
     </article>
 
@@ -241,19 +166,19 @@
 
     <section class="max-w-6xl mx-auto px-5 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
 
-        <div class="flex items-center gap-3">
+        <figure class="flex items-center gap-3">
 
             <img
-                src="assets/img/skullogo.jpg"
+                src="Assets/img/skullogo.jpg"
                 alt="SCC Logo"
                 class="h-8"
             >
 
-            <h2 class="font-semibold">
+            <figcaption class="font-semibold">
                 Cert IV Web Tech Portfolio
-            </h2>
+            </figcaption>
 
-        </div>
+        </figure>
 
         <p class="text-center">
             © 2026 Adrian Gould and Ashton Anderson
@@ -279,7 +204,7 @@
 
                 <li>
                     <a class="hover:text-white transition"
-                       href="mailto:20152010@tafe.wa.edu.au">
+                       href="contact.html">
                         Contact
                     </a>
                 </li>
@@ -292,6 +217,7 @@
 
 </footer>
 
-<script src="Assets/js/contactMe.js"></script>
+<script src="assets/js/contactMe.js"></script>
+
 </body>
 </html>
