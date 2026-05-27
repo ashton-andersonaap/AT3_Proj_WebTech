@@ -6,32 +6,19 @@
 
     <title>Ashton Anderson | Web Tech | Cert 4 Prog</title>
 
-
-    <!-- Your stylesheet -->
     <link rel="stylesheet" href="./assets/css/style.css">
-
 </head>
 
-<body
-    class="font-sans"
-    style="background-color:#EBFFCC; color:#23330A;"
->
+<body class="font-sans" style="background-color:#EBFFCC; color:#23330A;">
 
 <!-- HEADER -->
-<header
-    class="w-full text-white shadow-md"
-    style="background-color:#23330A;"
->
+<header class="w-full text-white shadow-md" style="background-color:#23330A;">
 
-    <section class="max-w-6xl mx-auto p-5 flex flex-wrap items-center justify-between gap-5">
+    <div class="max-w-6xl mx-auto p-5 flex flex-wrap items-center justify-between gap-5">
 
         <a href="." class="flex items-center gap-3 text-white">
 
-            <img
-                src="assets/img/skullogo.jpg"
-                alt="SCC Logo"
-                class="h-10"
-            >
+            <img src="assets/img/skullogo.jpg" alt="SCC Logo" class="h-10">
 
             <h1 class="text-base font-bold">
                 Certificate IV in IT (Programming) Web Tech Portfolio
@@ -42,23 +29,22 @@
         <nav aria-label="Main Navigation">
 
             <ul class="flex flex-wrap gap-5 font-bold text-gray-300">
-
                 <li><a class="hover:text-lime-300 transition" href="index.html">Home</a></li>
                 <li><a class="hover:text-lime-300 transition" href="about.html">About</a></li>
                 <li><a class="hover:text-lime-300 transition" href="contact.html">Contact</a></li>
                 <li><a class="hover:text-lime-300 transition" href="projects.html">Projects</a></li>
                 <li><a class="hover:text-lime-300 transition" href="mywork.html">My Work</a></li>
                 <li><a class="hover:text-lime-300 transition" href="resume.html">Resume</a></li>
-
             </ul>
 
         </nav>
 
-    </section>
+    </div>
 
 </header>
 
 
+<!-- MAIN -->
 <main class="w-full max-w-6xl mx-auto p-5 my-10 space-y-8">
 
     <!-- API CARD -->
@@ -80,30 +66,22 @@
                 Password Generator
             </label>
 
-            <input
-                type="text"
-                id="inputfield"
-                placeholder="Enter value..."
+            <input type="text" id="inputfield" placeholder="Enter value..."
                 class="p-3 border-2 rounded-md"
-                style="border-color:#9BCC52;"
-            >
+                style="border-color:#9BCC52;">
 
             <h3 class="text-xl font-bold">Output:</h3>
 
-            <output
-                id="APIoutput"
+            <output id="APIoutput"
                 class="border-2 p-4 min-h-[100px] rounded-md"
-                style="border-color:#9BCC52; background-color:#EBFFCC;"
-            ></output>
+                style="border-color:#9BCC52; background-color:#EBFFCC;">
+            </output>
 
-            <button
-                type="submit"
-                id="submitbutton"
+            <button type="submit"
                 class="p-4 font-bold rounded-md transition"
                 style="background-color:#D6FF99; color:#23330A;"
                 onmouseover="this.style.backgroundColor='#3E6700'; this.style.color='white';"
-                onmouseout="this.style.backgroundColor='#D6FF99'; this.style.color='#23330A';"
-            >
+                onmouseout="this.style.backgroundColor='#D6FF99'; this.style.color='#23330A';">
                 Submit
             </button>
 
@@ -111,77 +89,57 @@
 
     </article>
 
+
     <!-- CONTACT CARD -->
     <article class="bg-white border border-gray-500 flex flex-col gap-4 p-4 rounded-lg shadow-sm">
 
         <h2 class="text-3xl font-bold">Contact Form</h2>
 
-        <section class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4">
 
             <form id="contactForm" class="flex flex-col gap-4">
 
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="Name"
+                <input type="text" id="name" placeholder="Name"
                     class="p-3 border rounded-md"
-                    style="border-color:#9BCC52;"
-                >
+                    style="border-color:#9BCC52;">
                 <p id="nameError" class="text-red-600 text-sm"></p>
 
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Email"
+                <input type="email" id="email" placeholder="Email"
                     class="p-3 border rounded-md"
-                    style="border-color:#9BCC52;"
-                >
+                    style="border-color:#9BCC52;">
                 <p id="emailError" class="text-red-600 text-sm"></p>
 
-                <textarea
-                    id="message"
-                    placeholder="Message"
-                    rows="5"
+                <textarea id="message" placeholder="Message" rows="5"
                     class="p-3 border rounded-md"
-                    style="border-color:#9BCC52;"
-                ></textarea>
+                    style="border-color:#9BCC52;"></textarea>
                 <p id="messageError" class="text-red-600 text-sm"></p>
 
-                <button
-                    type="submit"
+                <button type="submit"
                     class="p-5 mt-auto font-bold"
                     style="background-color:#D6FF99;"
                     onmouseover="this.style.backgroundColor='#3E6700'; this.style.color='white';"
-                    onmouseout="this.style.backgroundColor='#9BCC52'; this.style.color='#23330A';"
-                >
+                    onmouseout="this.style.backgroundColor='#9BCC52'; this.style.color='#23330A';">
                     Send Message
                 </button>
 
             </form>
 
-        </section>
+        </div>
 
     </article>
 
-    <!-- IMAGE GRID -->
-
 </main>
 
-<!-- FOOTER -->
-<footer
-    class="mt-10 text-sm"
-    style="background-color:#23330A; color:#D6FF99;"
->
 
-    <section class="max-w-6xl mx-auto px-5 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+<!-- FOOTER -->
+<footer class="mt-10 text-sm"
+    style="background-color:#23330A; color:#D6FF99;">
+
+    <div class="max-w-6xl mx-auto px-5 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
 
         <figure class="flex items-center gap-3">
 
-            <img
-                src="Assets/img/skullogo.jpg"
-                alt="SCC Logo"
-                class="h-8"
-            >
+            <img src="Assets/img/skullogo.jpg" alt="SCC Logo" class="h-8">
 
             <figcaption class="font-semibold">
                 Cert IV Web Tech Portfolio
@@ -196,33 +154,14 @@
         <nav aria-label="Footer Navigation">
 
             <ul class="flex gap-4 flex-wrap justify-center">
-
-                <li>
-                    <a class="hover:text-white transition"
-                       href="https://www.northmetrotafe.wa.edu.au/apply-and-enrol">
-                        TAFE
-                    </a>
-                </li>
-
-                <li>
-                    <a class="hover:text-white transition"
-                       href="https://dev.screencraft.net.au/">
-                        ScreenCraft
-                    </a>
-                </li>
-
-                <li>
-                    <a class="hover:text-white transition"
-                       href="contact.html">
-                        Contact
-                    </a>
-                </li>
-
+                <li><a href="https://www.northmetrotafe.wa.edu.au/apply-and-enrol">TAFE</a></li>
+                <li><a href="https://dev.screencraft.net.au/">ScreenCraft</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
 
         </nav>
 
-    </section>
+    </div>
 
 </footer>
 
